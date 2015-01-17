@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ie.gmit.computing.dynamicdecisionsystem.Add_Child"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/header_add_child"
+        android:id="@+id/addChildTextView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="#000"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:weightSum="1">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_name"
+                android:id="@+id/firstNameTextView"
+                android:layout_weight="0.4"
+                android:padding="5dp"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:maxLength="30"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editTextName"
+                android:layout_weight="0.6"
+                android:padding="5dp"
+                android:inputType="textShortMessage" >
+                <requestFocus/>
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/button_save"
+                android:id="@+id/saveBtn"
+                android:onClick="addChild"
+                android:layout_weight=".5"
+                />
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/button_cancel"
+                android:id="@+id/CancelBtn"
+                android:onClick="cancelClick"
+                android:layout_weight=".5"/>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>

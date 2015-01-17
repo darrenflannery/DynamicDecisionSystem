@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@string/header_start"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerTextView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fff"
+        android:background="#000"
+        android:padding="5dp"/>
+
+    <ScrollView
+        android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/dyn_layout">
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/placeBtn"
+            android:text="@string/button_place"/>
+        <Button
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelBtn"
+            android:text="@string/button_cancel"/>
+    </LinearLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:weightSum="1.0">
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/button_add"
+                android:id="@+id/addBtn"
+                android:layout_weight="0.5"
+                android:onClick="addClick"/>
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/button_delete"
+                android:id="@+id/deleteBtn"
+                android:layout_weight=".5"
+                android:onClick="deleteClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:weightSum="1.0">
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/button_insert"
+                android:id="@+id/insertBtn"
+                android:layout_weight="0.5"
+                android:onClick="insertClick"
+                />
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/button_move"
+                android:id="@+id/moveBtn"
+                android:layout_weight=".5"
+                android:onClick="moveClick"/>
+        </TableRow>
+
+        </TableLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeBtn"
+        android:text="@string/button_home"
+        android:textColor="#459898"
+        android:onClick="homeClick"/>
+
+</LinearLayout>
